@@ -11,3 +11,4 @@ app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'vistas'));
 app.use(express.static(path.join(__dirname, 'publics')));
 app.use('/', enrutador);
+app.use('/inicio', enrutador);

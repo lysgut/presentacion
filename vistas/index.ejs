@@ -3,9 +3,72 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><%%></title>
+    <title>¡Conóceme!</title>
+    <style>
+        body {
+            background-color: #000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .container {
+            text-align: center;
+        }
+
+        .title {
+            font-size: 48px;
+            color: #fff;
+            text-transform: uppercase;
+            margin-bottom: 40px;
+            animation: neon-glow 1.5s ease-in-out infinite alternate;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 20px 40px;
+            font-size: 24px;
+            color: #fff;
+            background-color: #ff00cc;
+            border-radius: 50px;
+            text-decoration: none;
+            transition: transform 0.3s ease-in-out;
+            animation: pulse 2s infinite;
+        }
+
+        .button:hover {
+            transform: scale(1.1);
+        }
+
+        @keyframes neon-glow {
+            0% {
+                text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #ff00cc, 0 0 40px #ff00cc, 0 0 50px #ff00cc, 0 0 60px #ff00cc, 0 0 70px #ff00cc;
+            }
+            100% {
+                text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #ff00cc, 0 0 40px #ff00cc, 0 0 50px #ff00cc, 0 0 60px #ff00cc, 0 0 70px #ff00cc, 0 0 80px #ff00cc, 0 0 90px #ff00cc, 0 0 100px #ff00cc;
+            }
+        }
+
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.1);
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+    </style>
 </head>
 <body>
-    <h1>holis <%= datos %></h1>
+    <div class="container">
+        <h1 class="title">¡Conóceme!</h1>
+        <a href="/inicio" class="button">CONOCEME</a>
+    </div>
 </body>
 </html>
