@@ -12,3 +12,5 @@ app.set('views', path.join(__dirname, 'vistas'));
 app.use(express.static(path.join(__dirname, 'publics')));
 app.use('/', enrutador);
 app.use('/inicio', enrutador);
+app.use('/carac', enrutador);
+app.use('/personas', enrutador);

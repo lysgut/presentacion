@@ -13,10 +13,13 @@
             height: 100vh;
             margin: 0;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            overflow: hidden;
         }
 
         .container {
             text-align: center;
+            position: relative;
+            z-index: 1;
         }
 
         .title {
@@ -32,7 +35,7 @@
             padding: 20px 40px;
             font-size: 24px;
             color: #fff;
-            background-color: #ff00cc;
+            background-color: #FF6666;
             border-radius: 50px;
             text-decoration: none;
             transition: transform 0.3s ease-in-out;
@@ -45,10 +48,10 @@
 
         @keyframes neon-glow {
             0% {
-                text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #ff00cc, 0 0 40px #ff00cc, 0 0 50px #ff00cc, 0 0 60px #ff00cc, 0 0 70px #ff00cc;
+                text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #FF6666, 0 0 40px #FF6666, 0 0 50px #FF6666, 0 0 60px #FF6666, 0 0 70px #FF6666;
             }
             100% {
-                text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #ff00cc, 0 0 40px #ff00cc, 0 0 50px #ff00cc, 0 0 60px #ff00cc, 0 0 70px #ff00cc, 0 0 80px #ff00cc, 0 0 90px #ff00cc, 0 0 100px #ff00cc;
+                text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #FF6666, 0 0 40px #FF6666, 0 0 50px #FF6666, 0 0 60px #FF6666, 0 0 70px #FF6666, 0 0 80px #FF6666, 0 0 90px #FF6666, 0 0 100px #FF6666;
             }
         }
 
@@ -63,12 +66,23 @@
                 transform: scale(1);
             }
         }
+
+        .background-image {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            opacity: 0.3;
+        }
     </style>
 </head>
 <body>
     <div class="container">
         <h1 class="title">¡Conóceme!</h1>
-        <a href="localhost:11227/inicio" class="button">CONOCEME</a>
+        <a href="/inicio" class="button">CONOCEME</a>
     </div>
+    <img class="background-image" src="https://s1.1zoom.me/b6153/396/Roses_Closeup_Red_White_511467_2560x1440.jpg" alt="Roses">
 </body>
 </html>

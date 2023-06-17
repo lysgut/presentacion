@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vista de Suazilandia</title>
+    <style>
+        body {
+            background-color: #f5ec9f;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .buttons {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .button {
+            display: block;
+            width: 200px;
+            height: 50px;
+            margin-bottom: 10px;
+            background-color: #ff0000; /* Color de fondo liso */
+            border: none;
+            border-radius: 5px;
+            color: #fff;
+            font-size: 18px;
+            text-transform: uppercase;
+            text-decoration: none;
+            opacity: 0.8;
+            transition: opacity 0.3s;
+            position: relative;
+        }
+
+        .button:hover {
+            opacity: 1;
+        }
+
+        .popup {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+            display: none;
+        }
+
+        .popup.active {
+            display: block;
+        }
+
+        .popup-content {
+            padding: 20px;
+        }
+
+        .close-button {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            font-size: 16px;
+            color: #999;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="buttons">
+            <button class="button" onclick="openPopup('personalidad')">Personalidad</button>
+            <button class="button" onclick="openPopup('gustos')">Gustos</button>
+            <button class="button" onclick="openPopup('caracteristicas-fisicas')">Características Físicas</button>
+            <button class="button" onclick="openPopup('habilidades')">Habilidades</button>
+            <button class="button"><a href="/inicio">VOLVER</a></button>
+        </div>
+    </div>
+
+    <!-- Pop-up -->
+    <div id="personalidad-popup" class="popup">
+        <div class="popup-content">
+            <h2>Personalidad</h2>
+            <p>Suelo ser tranquilo cuando estoy solo, pero con mi novia o amigos, generalmente estoy exhaltado, saltando y haciendo cosas. Suelo ser una persona con muchos modales, sobre todo en el trato con las personas, me cuesta mucho no decirle "usted" a los adultos desconocidos, especialmente maestros. Y si lo hago fue un cambio consciente. Tengo valores fuertes y no me dejo llevar por lo que piense la mayoría, considdero siempre en crear un criterio propio y suelo dudar de las afirmaciones sin fundamentos de los demás (o de sus fundamentos), Considero que soy bastante amoroso y compañero y si hay algo que no me cabe, es el bullying y la violecia fugaz, porque lamentablemente no se ven esas microviolencias de los unos a los otros que muchas veces me parecen desagradables.</p>
+            <span class="close-button" onclick="closePopup('personalidad-popup')">X</span>
+        </div>
+    </div>
+
+    <div id="gustos-popup" class="popup">
+        <div class="popup-content">
+            <h2>Gustos</h2>
+            <p>Contenido del pop-up de Gustos</p>
+            <span class="close-button" onclick="closePopup('gustos-popup')">X</span>
+        </div>
+    </div>
+
+    <div id="caracteristicas-fisicas-popup" class="popup">
+        <div class="popup-content">
+            <h2>Características Físicas</h2>
+            <p>Contenido del pop-up de Características Físicas</p>
+            <span class="close-button" onclick="closePopup('caracteristicas-fisicas-popup')">X</span>
+        </div>
+    </div>
+
+    <div id="habilidades-popup" class="popup">
+        <div class="popup-content">
+            <h2>Habilidades</h2>
+            <p>Contenido del pop-up de Habilidades</p>
+            <span class="close-button" onclick="closePopup('habilidades-popup')">X</span>
+        </div>
+    </div>
+
+    <script>
+        function openPopup(popupId) {
+            var popup = document.getElementById(popupId + "-popup");
+            popup.classList.add("active");
+        }
+
+        function closePopup(popupId) {
+            var popup = document.getElementById(popupId);
+            popup.classList.remove("active");
+        }
+    </script>
+</body>
+</html>

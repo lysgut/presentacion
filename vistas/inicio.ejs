@@ -3,105 +3,55 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Expresiones Argentinas</title>
+    <title>Vista de Botones</title>
     <style>
         body {
-            background-color: #000;
+            background-color: #FFE6E6;
+            font-family: 'Times New Roman', serif;
             display: flex;
             align-items: center;
-            justify-content: center;
             height: 100vh;
             margin: 0;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
 
         .container {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            grid-gap: 20px;
+            padding-left: 50px;
+            display: flex;
+            align-items: center;
         }
 
         .button {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            padding: 20px;
-            font-size: 24px;
-            color: #fff;
-            background-color: #ff00cc;
-            border-radius: 50px;
-            text-decoration: none;
-            transition: transform 0.3s ease-in-out;
-            box-shadow: 0 0 10px rgba(255, 0, 204, 0.5);
+            display: inline-block;
+            padding: 15px 30px;
+            font-size: 20px;
+            color: #FFFFFF;
+            background-color: #FF6666;
+            border: none;
+            border-radius: 5px;
+            margin-right: 20px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
         }
 
         .button:hover {
-            transform: scale(1.1);
+            background-color: #FF9999;
         }
 
-        .button:nth-child(1) {
-            background-color: #ff00cc;
-            color: #fff;
-        }
-
-        .button:nth-child(2) {
-            background-color: #ff3300;
-            color: #fff;
-        }
-
-        .button:nth-child(3) {
-            background-color: #ff9900;
-            color: #fff;
-        }
-
-        .button:nth-child(4) {
-            background-color: #ffcc00;
-            color: #000;
-        }
-
-        .button:nth-child(5) {
-            background-color: #33ccff;
-            color: #000;
-        }
-
-        .button:nth-child(6) {
-            background-color: #9933ff;
-            color: #fff;
-        }
-
-        .button:nth-child(7) {
-            background-color: #00cc99;
-            color: #000;
-        }
-
-        .button:nth-child(8) {
-            background-color: #ffff00;
-            color: #000;
-        }
-
-        .button:nth-child(9) {
-            background-color: #ff0099;
-            color: #fff;
-        }
-
-        .button:nth-child(10) {
-            background-color: #00ccff;
-            color: #fff;
+        .image {
+            max-width: 300px;
+            height: auto;
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <a href="#" class="button">¡Qué quilombo!</a>
-        <a href="#" class="button">Boludo</a>
-        <a href="#" class="button">Che, ¿qué onda?</a>
-        <a href="#" class="button">Buenardo</a>
-        <a href="#" class="button">Chamuyero</a>
-        <a href="#" class="button">Laburar</a>
-        <a href="#" class="button">¡Vamos los pibes!</a>
-        <a href="#" class="button">Mina</a>
-        <a href="#" class="button">¡Viva la joda!</a>
-        <a href="#" class="button">Birra</a>
+        <div>
+            <h1>Selecciona una opción</h1>
+            <a href="/carac" class="button">Características Humanas</a>
+            <a href="/personas" class="button">Personas Cercanas</a>
+            <a href="/" class="button">Volver</a>
+        </div>
+        <img class="image" src="https://thumbs.dreamstime.com/b/tres-rosas-rojas-brillantes-aisladas-en-el-fondo-blanco-136808492.jpg" alt="Roses">
     </div>
 </body>
 </html>
